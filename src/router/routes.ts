@@ -1,47 +1,42 @@
-import TestView from "../views/TestView.vue";
 import {RouteRecordRaw} from "vue-router";
-import MainView from "../views/MainView.vue";
-import HomeView from "../views/home/index.vue";
-import BlogView from "../views/BlogView.vue";
-import CoursesView from "../views/CoursesView.vue";
-import AboutView from "../views/AboutView.vue";
+
 
 const routes: RouteRecordRaw[] =
     [
         {
             name: 'main',
             path: '/main',
-            component: MainView
+            component: () => import("../views/MainView.vue")
         },
         {
             name: 'test',
             path: '/test',
-            component: TestView
+            component: () => import("../views/TestView.vue")
         },
         {
             name: 'home',
             path: '/home',
-            component: HomeView
+            component: () => import("../views/home/index.vue")
         },
         {
             name: 'blog',
             path: '/blog',
-            component: BlogView
+            component: () => import("../views/blog/index.vue")
         },
         {
             name: 'courses',
             path: '/courses',
-            component: CoursesView
+            component: () => import("../views/CoursesView.vue")
         },
         {
             name: 'about',
             path: '/about',
-            component: AboutView
+            component: () => import("../views/AboutView.vue")
         },
         {
             name: 'test',
             path: '/test',
-            component: TestView
+            component: () => import("../views/TestView.vue")
         },
 
     ]

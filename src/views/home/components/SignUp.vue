@@ -9,24 +9,24 @@
                 <button
                         v-show="role"
                         @click="role=''"
-                        class="hidden lg:block absolute top-0 left-0 p-1 rounded-full bg-gray-200/50"
+                        class="hidden lg:block absolute top-0 left-0 p-1 rounded-full bg-gray-200/50 z-50"
                 >
                     <arrow-left-icon class="w-8 h-8 text-gray-700"></arrow-left-icon>
                 </button>
 
                 <div
                         v-if="role"
-                        class="hidden lg:block"
+                        class="relative hidden lg:block"
                 >
                     <img
                             v-if="role==='instructor'"
                             src="/assets/images/teacher.png"
-                            class="h-full object-cover"
+                            class="absolute h-full object-cover"
                     >
                     <img
                             v-if="role  === 'student'"
-                            src="/assets/images/teacher.png"
-                            class="h-full object-cover"
+                            src="/assets/images/student.png"
+                            class="absolute h-full object-cover"
                     >
                 </div>
 
