@@ -47,8 +47,8 @@
 import {useI18n} from "vue-i18n";
 import {useRoute, useRouter} from "vue-router";
 import {computed} from "vue";
-import {useProfileStore} from "../../../../stores/modules/profile";
-import MainHeaderAccount from "./MainHeaderAccount.vue";
+import {useProfileStore} from "../../../../store/modules/profile";
+import MainHeaderAccount from "./HeaderAccount.vue";
 import {useRouterQuery} from "../../../../composables/useRouterQuery";
 import {QueryAction} from "../../../../views/home/model";
 

@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import MainAlertBoxItem from "./MainAlertBoxItem.vue";
-import {useEventsStore} from "../../../../stores/modules/events";
+import {useEventsStore} from "../../../../store/modules/events";
 import {TransitionChild, TransitionRoot} from "@headlessui/vue";
 
 const events = useEventsStore()

@@ -3,7 +3,7 @@ import './style.css'
 import App from './App.vue'
 import Router from "./router/router";
 import i18n from "./i18n"
-import {store} from "./stores";
+import {store} from "./store";
 import {addAuthInterceptor} from "./utils/middleware/axios/axiosPipeline";
 import {createPinia} from "pinia";
 

@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts" setup>
-import {AlertAttitude, AlertType} from "../../../../stores/modules/events";
+import {AlertAttitude, AlertType} from "../../../../store/modules/events";
 import {
     ExclamationCircleIcon,
     ExclamationTriangleIcon,

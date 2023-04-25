@@ -1,5 +1,5 @@
 import {axiosPipeline} from "../utils/middleware/axios/axiosPipeline";
-import {AlertAttitude, AlertType, useEventsStore} from "../stores/modules/events";
+import {AlertAttitude, AlertType, useEventsStore} from "../store/modules/events";
 import {AxiosRequestConfig, AxiosResponse, AxiosError} from "axios";
 
 export interface FetchOptions {

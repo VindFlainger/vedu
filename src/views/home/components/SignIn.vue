@@ -74,7 +74,7 @@ import * as yup from 'yup'
 
 import {useI18n} from "vue-i18n";
 import {useField, useForm} from "vee-validate";
-import {useProfileStore} from "../../../stores/modules/profile";
+import {useProfileStore} from "../../../store/modules/profile";
 import {useRouter} from "vue-router";
 import {useRouterQuery} from "../../../composables/useRouterQuery";
 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        Blog
+        Courses
     </div>
 </template>
 

@@ -1,7 +1,7 @@
 import {AxiosRequestConfig} from "axios/index";
 import axios from 'axios'
 import {useRoute, useRouter} from "vue-router";
-import {useProfileStore} from "../../../stores/modules/profile";
+import {useProfileStore} from "../../../store/modules/profile";
 import {axiosBase} from "./axiosBase";
 
 interface AxiosRequestDataConfig extends AxiosRequestConfig {

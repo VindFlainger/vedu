@@ -30,10 +30,10 @@
 
 <script setup lang="ts">
 import {Menu, MenuButton, MenuItems} from "@headlessui/vue";
-import UiAvatar from "../../../UI/UiAvatar.vue";
+import UiAvatar from "../../../../components/UI/UiAvatar.vue";
 import {ChevronDownIcon} from "@heroicons/vue/24/outline";
 import {computed} from "vue";
-import {useProfileStore} from "../../../../stores/modules/profile";
+import {useProfileStore} from "../../../../store/modules/profile";
 import {useRoute} from "vue-router";
 
 const profile = useProfileStore()
