@@ -57,11 +57,11 @@ export const addAuthInterceptor = function () {
         })
             .catch((err) => {
                 if (err?.response) {
-                    if (err.response.data.code === 104) {
+                    if (err.response.data.code === 203) {
                         profile.signOut()
                         if (!route.query.redirect) router.push({
                             name: 'home',
-                            query: {redirect: route.fullPath}
+                            query: {action: 'sign-in'}
                         })
                     } else {
                         /* store.dispatch(addAlert, {

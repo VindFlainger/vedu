@@ -1,7 +1,7 @@
 <template>
-    <div>
-        Blog
-    </div>
+  <div>
+      NOT FOUND!
+  </div>
 </template>
 
 <script setup lang="ts">

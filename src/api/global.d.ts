@@ -5,18 +5,23 @@ export enum Codes {
     success = 1
 }
 
-
-export enum UserRole {
-    Student = 1,
-    Instructor = 2
+export enum UserPrivilege {
+    None,
+    Extended,
+    Advanced,
+    AdvancedPlus
 }
 
-
-enum UserGender {
+export enum UserGender {
     Male = 1,
     Female = 2
 }
 
+export enum UserRole {
+    None,
+    Student,
+    Instructor
+}
 
 export interface ResSuccess {
     code: Codes.success,
@@ -28,10 +33,10 @@ interface Req {
     options?: FetchOptions
 }
 
-export interface ReqGet<T> extends Req{
+export interface ReqGet<T = undefined> extends Req {
     params?: T
 }
 
-export interface ReqPost<T> extends Req{
+export interface ReqPost<T> extends Req {
     data?: T
 }

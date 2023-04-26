@@ -1,7 +1,7 @@
 <template>
     <img
             class="rounded-full"
-            :src="image">
+            :src="image || '/assets/images/user.png'">
 </template>
 
 <script setup lang="ts">

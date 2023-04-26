@@ -1,16 +1,15 @@
 import {createApp} from 'vue'
 import './style.css'
 import App from './App.vue'
-import Router from "./router/router";
+import {router} from "./router";
 import i18n from "./i18n"
 import {store} from "./store";
 import {addAuthInterceptor} from "./utils/middleware/axios/axiosPipeline";
-import {createPinia} from "pinia";
 
 const app = createApp(App)
 
 app.use(store)
-app.use(Router)
+app.use(router)
 app.use(i18n)
 
 // call all middleware callbacks

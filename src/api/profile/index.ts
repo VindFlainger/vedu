@@ -1,14 +1,14 @@
-import {ResInfoInstructor} from './model'
+import {ResUserInfo} from './model'
 import {useFetch} from "../../composables/useFetch";
 
 enum URL {
-    info_instructor = '/data/getInstructorInfo'
+    user_info = '/auth/getUserInfo'
 }
 
 const {getDataAuthed} = useFetch()
 
-const info_instructor = async ()=> getDataAuthed<ResInfoInstructor>(URL.info_instructor)
+const user_info = async () => getDataAuthed<ResUserInfo>(URL.user_info)
 
 export default {
-    info_instructor
+    user_info
 }

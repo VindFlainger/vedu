@@ -115,6 +115,7 @@ const submit = handleSubmit(async () => {
                     break;
             }
         })
+        router.replace({path: 'home'})
     } catch (err) {
     } finally {
         loading.value = false

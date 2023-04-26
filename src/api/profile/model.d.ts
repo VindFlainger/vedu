@@ -1,6 +1,6 @@
-import {UserGender} from "../global";
+import {UserGender, UserPrivilege, UserRole} from "../global";
 
-interface ResInfoInstructorImage {
+interface ResUserInfoImage {
     width: number,
     image: {
         file: string,
@@ -10,9 +10,12 @@ interface ResInfoInstructorImage {
     }
 }
 
-export interface ResInfoInstructor {
+
+export interface ResUserInfo {
     name: string,
     surname: string,
+    privilege: UserPrivilege,
+    role: UserRole,
     gender: UserGender,
-    avatar: ResInfoInstructorImage[]
+    avatar: ResUserInfoImage[]
 }

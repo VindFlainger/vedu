@@ -1,7 +1,9 @@
 import {RouteRecordRaw} from "vue-router";
 import BasicLayout from '../layouts/BasicLayout/index.vue'
+// @ts-ignore
+import {UserPrivilege} from "../api/global.d.ts";
 
-const constantRoutes: RouteRecordRaw[] = [
+export const routes: RouteRecordRaw[] = [
     {
         name: 'app',
         path: '/app',
@@ -10,7 +12,10 @@ const constantRoutes: RouteRecordRaw[] = [
             {
                 name: 'home',
                 path: 'home',
-                component: () => import('../views/home/index.vue')
+                component: () => import('../views/home/index.vue'),
+                meta: {
+                    disableAnimation: true
+                }
             },
             {
                 name: 'blog',
@@ -28,7 +33,44 @@ const constantRoutes: RouteRecordRaw[] = [
                 component: () => import('../views/courses/index.vue')
             },
         ]
+    }
+]
+
+export const finalRoutes: RouteRecordRaw[] = [
+    {
+        path: '/:pathMatch(.*)',
+        redirect: '/404',
+    },
+    {
+        path: '/404',
+        component: () => import('../views/404.vue'),
     },
 ]
 
-export default constantRoutes
+export const authedRoutes: RouteRecordRaw[] = [
+    {
+        name: 'donate',
+        path: 'donate',
+        component: () => import('../views/donate/index.vue'),
+    }
+]
+
+export const studentRoutes: RouteRecordRaw[] = [
+    {
+        name: 'classroom',
+        path: 'classroom',
+        component: () => import('../views/student/classroom/index.vue')
+    }
+]
+
+export const instructorRoutes: RouteRecordRaw[] = [
+    {
+        name: 'classroom',
+        path: 'classroom',
+        component: () => import('../views/student/classroom/index.vue'),
+        meta: {
+            privilege: UserPrivilege.AdvancedPlus
+        }
+    }
+]
+

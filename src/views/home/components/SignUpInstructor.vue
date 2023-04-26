@@ -1,45 +1,45 @@
 <template>
     <form >
-        <div class="grid sm:grid-cols-2 gap-y-2 gap-x-8">
+        <div class="grid sm:grid-flow-col sm:grid-rows-4 gap-y-2 gap-x-8">
             <ui-default-input
                     v-model="name.value.value"
                     :error-messages="submitCount?name.errors.value:[]"
                     :placeholder="t('auth.name')"
             ></ui-default-input>
             <ui-default-input
-                    v-model="email.value.value"
-                    :error-messages="submitCount?email.errors.value:[]"
-                    :placeholder="t('auth.email')"
-            ></ui-default-input>
-            <ui-default-input
                     v-model="surname.value.value"
                     :error-messages="submitCount?surname.errors.value:[]"
                     :placeholder="t('auth.surname')"
+            ></ui-default-input>
+            <ui-default-select
+                v-model="gender.value.value"
+                :error-messages="submitCount?gender.errors.value:[]"
+                :items="genders"
+                :placeholder="t('auth.gender')"
+            ></ui-default-select>
+            <ui-default-select
+                v-model="disciplines.value.value"
+                :items="availableDisciplines"
+                :error-messages="submitCount?disciplines.errors.value:[]"
+                :placeholder="t('auth.disciplines')"
+                multiple
+            ></ui-default-select>
+            <ui-default-input
+                v-model="email.value.value"
+                :error-messages="submitCount?email.errors.value:[]"
+                :placeholder="t('auth.email')"
             ></ui-default-input>
             <ui-password-input
                     v-model="password.value.value"
                     :error-messages="submitCount?password.errors.value:[]"
                     :placeholder="t('auth.password')"
             ></ui-password-input>
-            <ui-default-select
-                    v-model="disciplines.value.value"
-                    :items="availableDisciplines"
-                    :error-messages="submitCount?disciplines.errors.value:[]"
-                    :placeholder="t('auth.disciplines')"
-                    multiple
-            ></ui-default-select>
             <ui-default-input
                     v-model="repeatPassword.value.value"
                     :error-messages="submitCount?repeatPassword.errors.value:[]"
                     type="password"
                     :placeholder="t('auth.repeat-password')"
             ></ui-default-input>
-            <ui-default-select
-                    v-model="gender.value.value"
-                    :error-messages="submitCount?gender.errors.value:[]"
-                    :items="genders"
-                    :placeholder="t('auth.gender')"
-            ></ui-default-select>
         </div>
 
         <div class="flex justify-end">
@@ -72,7 +72,7 @@ import {useRouterQuery} from "../../../composables/useRouterQuery";
 
 import {QueryAction} from "../model";
 
-const router = useRouter()
+const index = useRouter()
 const {t, locale} = useI18n()
 const {changeQuery: changeAction} = useRouterQuery<QueryAction>('action')
 
@@ -161,7 +161,7 @@ const submit = handleSubmit(async () => {
                 handleSuccess: true
             }
         })
-        changeAction()
+        changeAction('sign-in')
     } catch (err) {
 
     } finally {

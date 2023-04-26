@@ -1,11 +1,11 @@
 <template>
-    <div class="w-full h-24 flex justify-center items-center fixed top-0 left-0 px-3 z-50"
-         :class="{'main': isHomeView, 'bg-main': isHomeView}">
+    <div class="w-full h-24 flex justify-center items-center fixed top-0 left-0 px-3 z-50 group"
+         :class="{'home': isHomeView, 'bg-main': isHomeView}">
         <div class="container h-24 flex items-center">
             <img src="/assets/images/mainlogo.png" class="h-4/6" alt="Logo">
             <div class="flex-grow"></div>
 
-            <div class="text-2xl text-white flex justify-between flex-grow max-w-lg">
+            <div class="text-2xl group-[.home]:text-white flex justify-between flex-grow max-w-lg font-light">
                 <router-link :to="{name: 'home'}" class="leading-[48px]">
                     {{ t('header.home') }}
                 </router-link>
@@ -20,16 +20,16 @@
                 </router-link>
             </div>
 
-            <div class="ml-20" v-if="!profile.authed">
+            <div class="ml-20" v-if="!profile.isAuthed">
                 <button
-                        class="h-12 bg-white tracking-wider rounded-3xl px-6 text-xl"
-                        @click="changeAction('sign-in')"
+                        class="h-12 group-[.home]:bg-white bg-gray-200 tracking-wider rounded-3xl px-6 text-xl"
+                        @click="route.name === 'home'?changeAction('sign-in'):router.push({name: 'home', query: {action: 'sign-in'}})"
                 >
                     {{ t('header.login') }}
                 </button>
                 <button
-                        class="h-12 bg-white/30 tracking-wider rounded-3xl px-6 text-xl text-white ml-5"
-                        @click="changeAction('sign-up')"
+                        class="h-12 group-[.home]:bg-white/30 bg-main  tracking-wider rounded-3xl px-6 text-xl text-white ml-5"
+                        @click="route.name === 'home'?changeAction('sign-up'):router.push({name: 'home', query: {action: 'sign-up'}})"
                 >
                     {{ t('header.sign-up') }}
                 </button>

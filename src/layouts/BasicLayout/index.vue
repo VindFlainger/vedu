@@ -5,9 +5,11 @@
             <div class="pt-24 flex justify-center px-3">
                 <div class="container">
                     <transition
-                        enter-active-class="duration-400"
-                        enter-from-class="opacity-10"
-                        enter-to-class="opacity-100"
+                            :css="!route.meta.disableAnimation"
+                            appear
+                            enter-active-class="transition-all duration-300"
+                            enter-from-class="opacity-0"
+                            enter-to-class="opacity-100"
                     >
                         <div :key="route.name">
                             <component :is="Component"></component>
@@ -21,6 +23,5 @@
 
 <script setup lang="ts">
 import Header from "./components/header/Header.vue";
-
 </script>
 

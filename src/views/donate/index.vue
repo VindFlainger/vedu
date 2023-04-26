@@ -1,6 +1,6 @@
 <template>
     <div>
-        Blog
+        DONATE
     </div>
 </template>
 

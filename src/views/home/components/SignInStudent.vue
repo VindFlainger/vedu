@@ -1,6 +1,6 @@
 <template>
     <form >
-        <div class="grid sm:grid-cols-2 gap-y-2 gap-x-8">
+        <div class="grid sm:grid-flow-col sm:grid-rows-3 gap-y-2 gap-x-8">
             <ui-default-input
                     v-model="name.value.value"
                     :error-messages="submitCount?name.errors.value:[]"
@@ -72,7 +72,7 @@ import {useRouterQuery} from "../../../composables/useRouterQuery";
 
 import {QueryAction} from "../model";
 
-const router = useRouter()
+const index = useRouter()
 const {t, locale} = useI18n()
 const {changeQuery: changeAction} = useRouterQuery<QueryAction>('action')
 

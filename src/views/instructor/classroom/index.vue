@@ -1,11 +1,13 @@
 <template>
     <div>
-        Blog
+        Instructor classroom
     </div>
 </template>
 
-<script setup lang="ts">
-
+<script>
+export default {
+    name: "index"
+}
 </script>
 
 <style scoped>

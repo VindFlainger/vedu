@@ -1,5 +1,5 @@
 <template>
-    <Menu>
+    <Menu v-if="profile.isGetUserInfo">
         <menu-button>
             <div
 
