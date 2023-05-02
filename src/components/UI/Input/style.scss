@@ -1,0 +1,25 @@
+.input {
+  width: 320px;
+
+
+  &__input {
+    width: calc(100%);
+    height: calc(100%);
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+    font-weight: 400;
+    outline: 1px solid rgb(55 65 8);
+    color: #1e1d1d;
+
+
+    &::selection {
+      background: rgba(73, 187, 189, 0.2);
+    }
+
+    &::placeholder {
+      color: #696984;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+  }
+}

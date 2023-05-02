@@ -49,13 +49,11 @@
 
             </div>
         </template>
-
-
     </ui-dialog>
 </template>
 
 <script setup lang="ts">
-import UiDialog from "../../../components/UI/UiDialog.vue";
+import UiDialog from "@/components/UI/UiDialog.vue";
 import SignUpChoose from "./SignUpChoose.vue";
 import SignUpInstructor from "./SignUpInstructor.vue";
 import SignUpStudent from "./SignUpStudent.vue";
@@ -64,7 +62,7 @@ import {ArrowLeftIcon} from "@heroicons/vue/24/outline";
 
 import {useI18n} from "vue-i18n";
 import {ref} from "vue";
-import {useRouterQuery} from "../../../composables/useRouterQuery";
+import {useRouterQuery} from "@/composables/useRouterQuery";
 
 import {QueryAction} from "../model";
 

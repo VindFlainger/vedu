@@ -1,0 +1,14 @@
+{
+  "preview": {
+    "instructor-title": "Why is it so important to create post in our blog?",
+    "student-title": "Why is it so important to read our blog?",
+    "instructor-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod tempor",
+    "student-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod tempor",
+    "read-button": "Start learning now",
+    "create-button": "Create post"
+  },
+  "recommended": "Recommended tags",
+  "hot": "Hot topics",
+  "see-all": "See all",
+  "read-more": "Read more"
+}

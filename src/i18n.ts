@@ -40,7 +40,6 @@ const loadMessages = async function (locale: string) {
     return messages
 }
 
-loadLocaleMessages()
 
 export default i18n
 

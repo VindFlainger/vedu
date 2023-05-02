@@ -1,18 +1,18 @@
 <template>
-    <ui-default-input
-        :type="visible?'text':'password'"
-        @click:inner-icon="visible=!visible"
-        @blur="visible=false"
+    <Input
+            :type="visible?'text':'password'"
+            @click:inner-icon="visible=!visible"
+            @blur="visible=false"
     >
-        <template v-slot:inner-icon>
+        <template #inner-icon>
             <EyeIcon v-if="visible" class="cursor-pointer"></EyeIcon>
             <EyeSlashIcon v-else class="cursor-pointer"></EyeSlashIcon>
         </template>
-    </ui-default-input>
+    </Input>
 </template>
 
-<script lang="ts" setup>
-import UiDefaultInput from "./UiDefaultInput.vue";
+<script setup lang="ts">
+import Input from './index.vue'
 import {EyeIcon, EyeSlashIcon} from "@heroicons/vue/24/outline";
 import {ref} from "vue";
 

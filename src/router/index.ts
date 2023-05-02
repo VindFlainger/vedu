@@ -1,6 +1,6 @@
 import {createRouter, createWebHistory} from "vue-router";
 import {finalRoutes, routes} from "./router.config";
-import {useProfileStore} from "../store/modules/profile";
+import {useProfileStore} from "@/store/modules/profile";
 
 
 export const router = createRouter({
@@ -8,7 +8,7 @@ export const router = createRouter({
     history: createWebHistory()
 })
 
-const whitelist = ['blog', 'about', 'courses', 'home']
+const whitelist = ['blog', 'about', 'courses', 'home', 'test', 'posts' ]
 
 router.beforeEach(async (to, _, next) => {
     const profile = useProfileStore()

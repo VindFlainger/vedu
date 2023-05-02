@@ -1,0 +1,60 @@
+{
+  "preview-title-studying": "Studying",
+  "preview-title": "Online is now much easier",
+  "preview-subtitle": "VEDU is an interesting platform that will teach you in more an interactive way",
+  "join-button": "Join for free",
+  "watch-button": "Watch how it works",
+  "success": {
+    "title": "Our Success",
+    "text": "Ornare id fames interdum porttitor nulla turpis etiam. Diam vitae sollicitudin at nec nam et pharetra gravida. Adipiscing a quis ultrices eu ornare tristique vel nisl orci. ",
+    "metrics": {
+      "students": "Students",
+      "success": "Total success",
+      "questions": "Main questions",
+      "experts": "Chief experts",
+      "experience": "Years of experience"
+    }
+  },
+  "features": {
+    "title-1": "All-In-One",
+    "title-2": "Cloud Software.",
+    "subtitle": "VEDU is one powerful online software suite that combines all the tools needed to run a successful school or office.",
+    "items": {
+      "item-1-title": "Online Billing, Invoicing, & Contracts",
+      "item-1-text": "Simple and secure control of your organization’s financial and legal transactions. Send customized invoices and contracts",
+      "item-2-title": "Easy Scheduling & Attendance Tracking",
+      "item-2-text": "Schedule and reserve classrooms at one campus or multiple campuses. Keep detailed records of student attendance",
+      "item-3-title": "Customer Tracking",
+      "item-3-text": "Automate and track emails to individuals or groups. Skilline’s built-in system helps organize your organization "
+    }
+  },
+  "about": {
+    "title-1": "What is",
+    "title-2": "VEDU?",
+    "subtitle": "VEDU is a platform that allows educators to create online classes whereby they can store the course materials online; manage assignments, quizzes and exams; monitor due dates; grade results and provide students with feedback all in one place.",
+    "for-instructors": "FOR INSTRUCTORS",
+    "for-students": "FOR STUDENTS",
+    "start-class": "Start a class today",
+    "enter-code": "Enter access code",
+    "compare-title-1": "Everything you can do in a physical classroom, ",
+    "compare-title-2": "you can do with VEDU",
+    "compare-text": "VEDU’s school management software helps traditional and online schools manage scheduling, attendance, payments and virtual classrooms all in one secure cloud-based system.",
+    "learn-more": "Learn more"
+  },
+  "reviews": {
+    "foreword": "TESTIMONIAL",
+    "title": "What They Say?",
+    "text-1": "VEDU has got more than 100k positive ratings from our users around the world. ",
+    "text-2": "Some of the students and teachers were greatly helped by the Skilline.",
+    "text-3": "Are you too? Please give your assessment",
+    "write": "Write your assessment",
+    "review": "Thank you so much for your help. It's exactly what I've been looking for. You won't regret it. It really saves me time and effort. TOTC is exactly what our business has been lacking.",
+    "reviewer": "Gloria Rose"
+  },
+  "news": {
+    "title": "Lastest News and Resources",
+    "subtitle": "See the developments that have occurred to TOTC in the world",
+    "read-more": "Read more"
+  }
+
+}

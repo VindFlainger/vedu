@@ -7,30 +7,38 @@
 
         <template v-slot:text>
             <form class="mt-12">
-                <ui-default-input
+                <Input
                         v-model="email.value.value"
+                        class="w-full"
+                        input-class="h-11 text-xl"
                         style="target: above"
                         :placeholder="t('auth.email')"
                         :error-messages="submitCount?email.errors.value:[]"
                         name="email"
                         autocomplete="email"
-                ></ui-default-input>
-                <ui-password-input
-                        class="mt-1"
+                ></Input>
+                <PasswordInput
+                        class="mt-1 w-full"
+                        input-class="h-11 text-xl bg-white bg-opacity-80"
                         v-model="password.value.value"
                         :placeholder="t('auth.password')"
                         :error-messages="submitCount?password.errors.value:[]"
                         name="current-password"
                         autocomplete="current-password"
-                ></ui-password-input>
+                ></PasswordInput>
             </form>
         </template>
 
         <template v-slot:actions>
             <div class="flex justify-center mt-6">
-                <ui-action-button @click="submit" :loading="loading" class="w-44">
+                <Button
+                    template="action"
+                    @click="submit"
+                    :loading="loading"
+                    class="w-44"
+                >
                     {{ t('auth.sign-in') }}
-                </ui-action-button>
+                </Button>
             </div>
 
             <div class="mt-8">
@@ -64,19 +72,19 @@
 </template>
 
 <script setup lang="ts">
-import UiDialog from "../../../components/UI/UiDialog.vue";
-import UiActionButton from "../../../components/UI/buttons/UiActionButton.vue";
-import UiDefaultInput from "../../../components/UI/unputs/UiDefaultInput.vue";
-import UiPasswordInput from "../../../components/UI/unputs/UiPasswordInput.vue";
+import UiDialog from "@/components/UI/UiDialog.vue";
+import PasswordInput from "@/components/UI/Input/PasswordInput.vue";
+import Button from '@/components/UI/Button/index.vue'
+import Input from '@/components/UI/Input/index.vue'
 
 import {ref} from "vue";
 import * as yup from 'yup'
 
 import {useI18n} from "vue-i18n";
 import {useField, useForm} from "vee-validate";
-import {useProfileStore} from "../../../store/modules/profile";
+import {useProfileStore} from "@/store/modules/profile";
 import {useRouter} from "vue-router";
-import {useRouterQuery} from "../../../composables/useRouterQuery";
+import {useRouterQuery} from "@/composables/useRouterQuery";
 
 import {QueryAction} from "../model";
 

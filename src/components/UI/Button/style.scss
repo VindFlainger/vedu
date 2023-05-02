@@ -1,0 +1,52 @@
+.button {
+  padding: 0.5rem 2rem;
+  min-height: 44px;
+  min-width: 100px;
+
+  &::selection {
+    background: none;
+  }
+
+  &-base {
+    background: #49BBBD;
+    border-radius: 0.75rem;
+    color: white;
+    transition: ease-in .2s;
+    outline: none;
+    font-weight: bold;
+
+    &:hover {
+      background: rgba(73, 187, 189, 0.6);
+      outline: 2px solid rgba(73, 187, 189, 0.6);
+      outline-offset: 2px;
+    }
+  }
+
+  &-action {
+    background: #D8587E;
+    border-radius: 1.5rem;
+    color: white;
+    transition: ease-in .2s;
+    outline: none;
+
+    &:hover {
+      background: rgba(216, 88, 126, 0.60);
+      outline: 2px solid rgba(216, 88, 126, 0.90);
+      outline-offset: 2px;
+    }
+  }
+
+  &-complete {
+    background: #49BBBD;
+    border-radius: 1.5rem;
+    color: white;
+    transition: ease-in .2s;
+    outline: none;
+
+    &:hover {
+      background: rgba(116, 205, 206, 0.6);
+      outline: 2px solid rgba(116, 205, 206, 0.9);
+      outline-offset: 2px;
+    }
+  }
+}

@@ -12,7 +12,7 @@ export const routes: RouteRecordRaw[] = [
             {
                 name: 'home',
                 path: 'home',
-                component: () => import('../views/home/index.vue'),
+                component: () => import('@/views/home/index.vue'),
                 meta: {
                     disableAnimation: true
                 }
@@ -20,18 +20,28 @@ export const routes: RouteRecordRaw[] = [
             {
                 name: 'blog',
                 path: 'blog',
-                component: () => import('../views/blog/index.vue')
+                component: () => import('@/views/blog/index.vue')
             },
             {
                 name: 'about',
                 path: 'about',
-                component: () => import('../views/about/index.vue')
+                component: () => import('@/views/about/index.vue')
             },
             {
                 name: 'courses',
                 path: 'courses',
-                component: () => import('../views/courses/index.vue')
+                component: () => import('@/views/courses/index.vue')
             },
+            {
+                name: 'posts',
+                path: 'posts',
+                component: () => import('@/views/posts/index.vue')
+            },
+            {
+                name: 'test',
+                path: 'test',
+                component: () => import('@/views/TestView.vue')
+            }
         ]
     }
 ]
@@ -51,7 +61,7 @@ export const authedRoutes: RouteRecordRaw[] = [
     {
         name: 'donate',
         path: 'donate',
-        component: () => import('../views/donate/index.vue'),
+        component: () => import('@/views/donate/index.vue'),
     }
 ]
 
@@ -59,7 +69,7 @@ export const studentRoutes: RouteRecordRaw[] = [
     {
         name: 'classroom',
         path: 'classroom',
-        component: () => import('../views/student/classroom/index.vue')
+        component: () => import('@/views/student/classroom/index.vue')
     }
 ]
 
@@ -67,7 +77,7 @@ export const instructorRoutes: RouteRecordRaw[] = [
     {
         name: 'classroom',
         path: 'classroom',
-        component: () => import('../views/student/classroom/index.vue'),
+        component: () => import('@/views/student/classroom/index.vue'),
         meta: {
             privilege: UserPrivilege.AdvancedPlus
         }

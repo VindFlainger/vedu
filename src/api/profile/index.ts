@@ -1,5 +1,5 @@
 import {ResUserInfo} from './model'
-import {useFetch} from "../../composables/useFetch";
+import {useFetch} from "@/composables/useFetch";
 
 enum URL {
     user_info = '/auth/getUserInfo'

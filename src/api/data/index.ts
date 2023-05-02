@@ -1,5 +1,5 @@
 import {ReqParamsDisciplines, ResDisciplines} from "./model";
-import {useFetch} from "../../composables/useFetch";
+import {useFetch} from "@/composables/useFetch";
 import {ReqGet} from "../global";
 
 const {getData} = useFetch()

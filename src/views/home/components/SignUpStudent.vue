@@ -1,56 +1,67 @@
 <template>
     <form autocomplete="off">
         <div class="grid md:grid-flow-col sm:grid-rows-3 gap-y-2 gap-x-8">
-            <ui-default-input
+            <Input
+                    class="w-full"
+                    input-class="bg-white bg-opacity-60 h-11 text-xl outline-grey"
                     v-model="name.value.value"
                     :error-messages="submitCount?name.errors.value:[]"
                     :placeholder="t('auth.name')"
-            ></ui-default-input>
-            <ui-default-input
-                v-model="surname.value.value"
-                :error-messages="submitCount?surname.errors.value:[]"
-                :placeholder="t('auth.surname')"
-            ></ui-default-input>
+            ></Input>
+            <Input
+                    class="w-full"
+                    input-class="bg-white bg-opacity-60 h-11 text-xl outline-grey"
+                    v-model="surname.value.value"
+                    :error-messages="submitCount?surname.errors.value:[]"
+                    :placeholder="t('auth.surname')"
+            ></Input>
             <ui-default-select
-                v-model="gender.value.value"
-                :error-messages="submitCount?gender.errors.value:[]"
-                :items="genders"
-                :placeholder="t('auth.gender')"
+                    v-model="gender.value.value"
+                    :error-messages="submitCount?gender.errors.value:[]"
+                    :items="genders"
+                    :placeholder="t('auth.gender')"
             ></ui-default-select>
-            <ui-default-input
+            <Input
+                    class="w-full"
+                    input-class="bg-white bg-opacity-60 h-11 text-xl outline-grey"
                     v-model="email.value.value"
                     :error-messages="submitCount?email.errors.value:[]"
                     :placeholder="t('auth.email')"
-            ></ui-default-input>
-            <ui-password-input
+            ></Input>
+            <PasswordInput
+                    class="w-full"
+                    input-class="bg-white bg-opacity-60 h-11 text-xl outline-grey"
                     v-model="password.value.value"
                     :error-messages="submitCount?password.errors.value:[]"
                     :placeholder="t('auth.password')"
-            ></ui-password-input>
-            <ui-default-input
+            ></PasswordInput>
+            <Input
+                    class="w-full"
+                    input-class="bg-white bg-opacity-60 h-11 text-xl outline-grey"
                     v-model="repeatPassword.value.value"
                     :error-messages="submitCount?repeatPassword.errors.value:[]"
                     type="password"
                     :placeholder="t('auth.repeat-password')"
-            ></ui-default-input>
+            ></Input>
         </div>
 
         <div class="flex justify-end">
-            <ui-default-button
+            <Button
                     @click="submit"
                     :loading="loading"
+                    :template="'action'"
             >
                 {{ t('common.submit') }}
-            </ui-default-button>
+            </Button>
         </div>
     </form>
 </template>
 
 <script setup lang="ts">
-import UiDefaultInput from "../../../components/UI/unputs/UiDefaultInput.vue";
-import UiDefaultButton from "../../../components/UI/buttons/UiDefaultButton.vue";
-import UiDefaultSelect from "../../../components/UI/unputs/UiDefaultSelect.vue";
-import UiPasswordInput from "../../../components/UI/unputs/UiPasswordInput.vue";
+import UiDefaultSelect from "@/components/UI/unputs/UiDefaultSelect.vue";
+import Button from "@/components/UI/Button/index.vue";
+import Input from '@/components/UI/Input/index.vue'
+
 
 import * as yup from 'yup'
 import {ref} from "vue";
@@ -58,10 +69,11 @@ import {ref} from "vue";
 import {useI18n} from "vue-i18n";
 import {useField, useForm} from "vee-validate";
 import {useRouter} from "vue-router";
-import fetchAuth from '../../../api/auth'
-import {useRouterQuery} from "../../../composables/useRouterQuery";
+import fetchAuth from '@/api/auth'
+import {useRouterQuery} from "@/composables/useRouterQuery";
 
 import {QueryAction} from "../model";
+import PasswordInput from "@/components/UI/Input/PasswordInput.vue";
 
 const index = useRouter()
 const {t} = useI18n()

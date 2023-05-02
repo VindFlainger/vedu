@@ -1,12 +1,12 @@
 import {defineStore} from "pinia";
 import {RemovableRef, useLocalStorage} from "@vueuse/core";
 
-import fetchAuth from '../../api/auth'
-import fetchProfile from '../../api/profile'
-import {ResUserInfoImage} from "../../api/profile/model";
+import fetchAuth from '@/api/auth'
+import fetchProfile from '@/api/profile'
+import {ResUserInfoImage} from "@/api/profile/model";
 // @ts-ignore
-import {UserGender, UserPrivilege, UserRole} from "../../api/global.d.ts";
-import {authedRoutes, instructorRoutes} from "../../router/router.config";
+import {UserGender, UserPrivilege, UserRole} from "@/api/global.d.ts";
+import {authedRoutes, instructorRoutes, studentRoutes} from "@/router/router.config";
 
 
 export interface ProfileState {
@@ -108,7 +108,7 @@ export const useProfileStore = defineStore('profile', {
         async buildRoutes() {
             const routes = []
             if (this.isStudent) {
-                routes.push(...instructorRoutes)
+                routes.push(...studentRoutes)
             }
             if (this.isInstructor) {
                 routes.push(...instructorRoutes)

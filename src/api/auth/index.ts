@@ -1,5 +1,5 @@
 import {ReqDataSignIn, ReqDataSignUpInstructor, ReqDataSignUpStudent, ResSignIn} from './model'
-import {useFetch} from "../../composables/useFetch";
+import {useFetch} from "@/composables/useFetch";
 import {ReqPost, ResSuccess} from "../global";
 
 enum URL {
